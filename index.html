@@ -767,58 +767,6 @@
     color: var(--muted);
   }
 
-  /* BILLING TOGGLE */
-  .billing-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    margin-bottom: 40px;
-  }
-
-  .toggle-label {
-    font-family: 'Syne', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--muted);
-    transition: color 0.3s;
-    cursor: pointer;
-  }
-
-  .toggle-label.active { color: var(--text); }
-
-  .toggle-switch {
-    position: relative;
-    width: 52px; height: 28px;
-    background: rgba(107,92,255,0.2);
-    border: 1px solid rgba(107,92,255,0.4);
-    border-radius: 14px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-  .toggle-switch.annual { background: linear-gradient(90deg, var(--blue), var(--purple)); border-color: transparent; }
-
-  .toggle-knob {
-    position: absolute;
-    top: 3px; left: 3px;
-    width: 20px; height: 20px;
-    background: #fff;
-    border-radius: 50%;
-    transition: left 0.3s;
-  }
-
-  .toggle-switch.annual .toggle-knob { left: 27px; }
-
-  .save-badge {
-    background: linear-gradient(135deg, var(--red), var(--orange));
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-
   /* TIMER */
   .timer-section {
     padding: 80px 40px;
@@ -1154,16 +1102,6 @@
     <p class="section-sub" style="margin:0 auto;">Três cursos. Três plataformas. Um único objetivo: você no lucro.</p>
   </div>
 
-  <!-- BILLING TOGGLE -->
-  <div class="billing-toggle fade-in" style="margin-bottom:50px;">
-    <span class="toggle-label active" id="label-monthly" onclick="setBilling('monthly')">Pagamento Único</span>
-    <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()">
-      <div class="toggle-knob"></div>
-    </div>
-    <span class="toggle-label" id="label-annual" onclick="setBilling('annual')">Plano Mensal</span>
-    <span class="save-badge">MAIS FLEXÍVEL</span>
-  </div>
-
   <!-- FLAGSHIP: ESTRELA DOMINANTE -->
   <div class="flagship fade-in">
     <div class="flagship-inner">
@@ -1192,9 +1130,9 @@
       <div class="price-box">
         <div class="price-platform">Estrelabet</div>
         <div class="price-course-name">Estrela Dominante</div>
-        <div class="price-old" id="estrela-old">De R$ 697,00</div>
-        <div class="price-main" id="estrela-price">R$297</div>
-        <div class="price-period" id="estrela-period">Pagamento único — acesso vitalício</div>
+        <div class="price-old">De R$ 697,00</div>
+        <div class="price-main" style="font-size:80px;">R$249</div>
+        <div class="price-period">Pagamento único — acesso vitalício</div>
         <div class="price-guarantee">🛡️ Garantia de 7 dias ou seu dinheiro de volta</div>
         <div class="spots-left">🔥 Apenas 9 vagas restantes nesta turma</div>
         <a href="#" class="btn-cta btn-fire" style="width:100%;display:block;text-align:center;padding:18px;" onclick="openModal('estrelabet')">GARANTIR MINHA VAGA</a>
@@ -1220,9 +1158,9 @@
         <li>Sistema de rastreamento de resultados</li>
         <li>Suporte por 15 dias no grupo exclusivo</li>
       </ul>
-      <div class="card-price-old" id="superbet-old">De R$ 497,00</div>
-      <div class="card-price" id="superbet-price" style="background:linear-gradient(135deg,var(--blue-light),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">R$197</div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:16px;" id="superbet-period">Acesso vitalício</div>
+      <div class="card-price-old">De R$ 497,00</div>
+      <div class="card-price" style="background:linear-gradient(135deg,var(--blue-light),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">R$199</div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:16px;">Pagamento único — acesso vitalício</div>
       <div class="spots-left" style="font-size:13px;margin-bottom:16px;">⚠️ 14 vagas disponíveis</div>
       <a href="#" class="btn-outline" onclick="openModal('superbet')">Quero o Código Supremo →</a>
     </div>
@@ -1241,9 +1179,9 @@
         <li>Decodificação das promoções e freebets</li>
         <li>Suporte por 15 dias no grupo exclusivo</li>
       </ul>
-      <div class="card-price-old" id="betano-old">De R$ 497,00</div>
-      <div class="card-price" id="betano-price" style="background:linear-gradient(135deg,var(--red),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">R$197</div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:16px;" id="betano-period">Acesso vitalício</div>
+      <div class="card-price-old">De R$ 497,00</div>
+      <div class="card-price" style="background:linear-gradient(135deg,var(--red),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">R$199</div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:16px;">Pagamento único — acesso vitalício</div>
       <div class="spots-left" style="font-size:13px;margin-bottom:16px;">⚠️ 11 vagas disponíveis</div>
       <a href="#" class="btn-outline btn-fire" onclick="openModal('betano')" style="border-color:rgba(232,20,42,0.4);color:var(--red);">Quero o Fator B →</a>
     </div>
@@ -1382,66 +1320,14 @@
     <div id="modal-badge" class="flagship-badge" style="margin-bottom:16px;display:inline-block;"></div>
     <h3 id="modal-title" style="font-family:'Bebas Neue',sans-serif;font-size:42px;margin-bottom:8px;color:#fff;"></h3>
     <p id="modal-price" style="font-family:'Bebas Neue',sans-serif;font-size:60px;background:linear-gradient(135deg,var(--blue-light),var(--purple-mid));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;"></p>
-    <p style="color:var(--muted);font-size:14px;margin-bottom:24px;">Pagamento único · Acesso vitalício · Garantia de 7 dias</p>
-    <a href="https://wa.me/5527999999999?text=Quero%20garantir%20minha%20vaga" target="_blank" class="btn-cta btn-fire" style="width:100%;display:block;text-align:center;margin-bottom:12px;">📲 Finalizar via WhatsApp</a>
+    <p style="color:var(--muted);font-size:14px;margin-bottom:24px;">Pagamento único · acesso vitalício · Garantia de 7 dias</p>
+    <a href="https://wa.me/5527992537677?text=Quero%20garantir%20minha%20vaga" target="_blank" class="btn-cta btn-fire" style="width:100%;display:block;text-align:center;margin-bottom:12px;">📲 Finalizar via WhatsApp</a>
     <a href="#" class="btn-outline" style="display:block;">💳 Pagar com Cartão / Pix</a>
     <p style="font-size:12px;color:var(--muted);margin-top:16px;">🔒 Ambiente 100% seguro · 🛡️ Garantia total de 7 dias</p>
   </div>
 </div>
 
 <script>
-// BILLING TOGGLE
-let billingMode = 'monthly'; // monthly = pagamento único, annual = mensal
-
-const pricing = {
-  monthly: {
-    estrela: { old: 'De R$ 697,00', price: 'R$297', period: 'Pagamento único — acesso vitalício' },
-    superbet: { old: 'De R$ 497,00', price: 'R$197', period: 'Acesso vitalício' },
-    betano:   { old: 'De R$ 497,00', price: 'R$197', period: 'Acesso vitalício' },
-  },
-  annual: {
-    estrela: { old: 'R$297 à vista', price: 'R$37Pagamento único — acesso vitalício', period: 'Cobrado mensalmente • cancele quando quiser' },
-    superbet: { old: 'R$197 à vista', price: 'R$24Pagamento único — acesso vitalício', period: 'Cobrado mensalmente • cancele quando quiser' },
-    betano:   { old: 'R$197 à vista', price: 'R$24Pagamento único — acesso vitalício', period: 'Cobrado mensalmente • cancele quando quiser' },
-  }
-};
-
-function applyPricing(mode) {
-  const p = pricing[mode];
-  document.getElementById('estrela-old').textContent = p.estrela.old;
-  document.getElementById('estrela-price').textContent = p.estrela.price;
-  document.getElementById('estrela-period').textContent = p.estrela.period;
-  document.getElementById('superbet-old').textContent = p.superbet.old;
-  document.getElementById('superbet-price').textContent = p.superbet.price;
-  document.getElementById('superbet-period').textContent = p.superbet.period;
-  document.getElementById('betano-old').textContent = p.betano.old;
-  document.getElementById('betano-price').textContent = p.betano.price;
-  document.getElementById('betano-period').textContent = p.betano.period;
-
-  const toggle = document.getElementById('billingToggle');
-  const lm = document.getElementById('label-monthly');
-  const la = document.getElementById('label-annual');
-  if (mode === 'annual') {
-    toggle.classList.add('annual');
-    lm.classList.remove('active');
-    la.classList.add('active');
-  } else {
-    toggle.classList.remove('annual');
-    lm.classList.add('active');
-    la.classList.remove('active');
-  }
-}
-
-function toggleBilling() {
-  billingMode = billingMode === 'monthly' ? 'annual' : 'monthly';
-  applyPricing(billingMode);
-}
-
-function setBilling(mode) {
-  billingMode = mode;
-  applyPricing(mode);
-}
-
 // COUNTDOWN
 function startCountdown() {
   const key = 'betmasters_deadline';
